@@ -1,14 +1,23 @@
-# react-ticketlog
-ticketing dashboard is a dashboard for customer care center.
+# Project
+FCA is a digital agency Fine Creative Arts
 
-## Installation
-```bash
+# Tech use
+react (View)
+react-dom
+webpack (bundle manager)
+webpack-dev-server (localhost, hotloader)
+babel (compiler)
+(css manager / compiler)
+css-loader
+style-loader
+```
+Visualize size of webpack output files with an interactive zoomable treemap.
+npm install --save-dev webpack-bundle-analyzer
+```
+# How to start
+```
 npm install
+npm start (will run dev env)
+npm build (will build prod)
 ```
 
-## Packages
-1. react
-2. react-dom
-3. react-scripts
-4. webpack
-5. babel
