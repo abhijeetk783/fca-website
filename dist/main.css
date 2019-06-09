@@ -1,0 +1,23 @@
+.badge {
+  font-size: 15px;
+}
+.badge.badge-warning {
+  background-color: yellow;
+}
+.badge.badge-primary {
+  background-color: pink;
+}
+.header {
+  color: #6c94be;
+}
+input {
+  border: 1px solid red;
+}
+button {
+  border: 1px solid black;
+  background: #eee;
+  color: red;
+}
+.home-wrapper {
+  background: #eee;
+}
