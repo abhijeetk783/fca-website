@@ -133,6 +133,18 @@ eval("// removed by extract-text-webpack-plugin\nmodule.exports = {\"badge\":\"b
 
 /***/ }),
 
+/***/ "./app/header/index.js":
+/*!*****************************!*\
+  !*** ./app/header/index.js ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nclass Header extends react__WEBPACK_IMPORTED_MODULE_0__[\"Component\"] {\n  //state = {  }\n  render() {\n    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n      className: \"page-header\"\n    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"header\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n      className: \"logo\"\n    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n      className: \"hamburger\"\n    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"span\", {\n      className: \"bar\"\n    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"span\", {\n      className: \"bar\"\n    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"span\", {\n      className: \"bar\"\n    }))));\n  }\n\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Header);\n\n//# sourceURL=webpack:///./app/header/index.js?");
+
+/***/ }),
+
 /***/ "./app/home/Banner.js":
 /*!****************************!*\
   !*** ./app/home/Banner.js ***!
@@ -145,6 +157,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 
 /***/ }),
 
+/***/ "./app/home/Carousel.js":
+/*!******************************!*\
+  !*** ./app/home/Carousel.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nclass Carousel extends react__WEBPACK_IMPORTED_MODULE_0__[\"Component\"] {\n  constructor(props) {\n    super(props);\n    this.state = {\n      data: [{\n        \"_id\": \"5d028e26e2818d216e74f5c0\",\n        \"color\": \"green\",\n        \"title\": \"Kramer Dixon\",\n        \"subtitle\": \"male\"\n      }, {\n        \"_id\": \"5d028e26122cf11b4a5d3394\",\n        \"color\": \"yellow\",\n        \"title\": \"Gould Heath\",\n        \"subtitle\": \"male\"\n      }, {\n        \"_id\": \"5d028e2634c9c788e3c65b1f\",\n        \"color\": \"blue\",\n        \"title\": \"Galloway Gilliam\",\n        \"subtitle\": \"male\"\n      }, {\n        \"_id\": \"5d028e26ac8e0a463a9b43ee\",\n        \"color\": \"brown\",\n        \"title\": \"Elizabeth Giles\",\n        \"subtitle\": \"female\"\n      }, {\n        \"_id\": \"5d028e2617383507ab3dc123\",\n        \"color\": \"red\",\n        \"title\": \"Jackson Cooke\",\n        \"subtitle\": \"male\"\n      }, {\n        \"_id\": \"5d028e26e12dcaecfb1d6b58\",\n        \"color\": \"black\",\n        \"title\": \"Allen Garner\",\n        \"subtitle\": \"male\"\n      }, {\n        \"_id\": \"5d028e26849b74776f86d9b2\",\n        \"color\": \"pink\",\n        \"title\": \"Leonor Oneill\",\n        \"subtitle\": \"female\"\n      }]\n    };\n  }\n\n  renderData() {\n    return this.state.data.map((item, i) => {\n      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        className: \"slide-wrapper\"\n      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        className: \"slide _is-active\",\n        key: i\n      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"a\", {\n        className: \"slide-link\",\n        href: \"\"\n      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        className: `image-container __left _${item.color}`\n      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        className: \"content __right\"\n      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"h5\", {\n        className: \"title\"\n      }, item.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        className: \"subtitle\"\n      }, item.subtitle)))));\n    });\n  }\n\n  render() {\n    const renderData = this.renderData();\n    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"section\", {\n      className: \"portfolio carousel-wrapper\"\n    }, renderData);\n  }\n\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Carousel);\n\n//# sourceURL=webpack:///./app/home/Carousel.js?");
+
+/***/ }),
+
 /***/ "./app/home/home.less":
 /*!****************************!*\
   !*** ./app/home/home.less ***!
@@ -152,7 +176,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("// removed by extract-text-webpack-plugin\nmodule.exports = {\"banner\":\"banner\",\"title\":\"title\",\"sub-title\":\"sub-title\"};\n\n//# sourceURL=webpack:///./app/home/home.less?");
+eval("// removed by extract-text-webpack-plugin\nmodule.exports = {\"banner\":\"banner\",\"title\":\"title\",\"sub-title\":\"sub-title\",\"slide-wrapper\":\"slide-wrapper\",\"slide\":\"slide\",\"_is-active\":\"_is-active\",\"slide-link\":\"slide-link\",\"image-container\":\"image-container\",\"_green\":\"_green\",\"_yellow\":\"_yellow\",\"_blue\":\"_blue\",\"_brown\":\"_brown\",\"_red\":\"_red\",\"_black\":\"_black\",\"_pink\":\"_pink\",\"__left\":\"__left\",\"__right\":\"__right\",\"content\":\"content\",\"subtitle\":\"subtitle\"};\n\n//# sourceURL=webpack:///./app/home/home.less?");
 
 /***/ }),
 
@@ -164,7 +188,7 @@ eval("// removed by extract-text-webpack-plugin\nmodule.exports = {\"banner\":\"
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Banner__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Banner */ \"./app/home/Banner.js\");\n/* harmony import */ var _home_less__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./home.less */ \"./app/home/home.less\");\n/* harmony import */ var _home_less__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_home_less__WEBPACK_IMPORTED_MODULE_2__);\n/** Import modules*/\n\n/** Import files*/\n\n\n\n\nclass Home extends react__WEBPACK_IMPORTED_MODULE_0__[\"Component\"] {\n  //  state = {  }\n  render() {\n    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n      className: \"home-wrapper page-wrapper\"\n    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n      className: \"container\"\n    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Banner__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null)));\n  }\n\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Home);\n\n//# sourceURL=webpack:///./app/home/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Banner__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Banner */ \"./app/home/Banner.js\");\n/* harmony import */ var _Carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Carousel */ \"./app/home/Carousel.js\");\n/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../header */ \"./app/header/index.js\");\n/* harmony import */ var _home_less__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./home.less */ \"./app/home/home.less\");\n/* harmony import */ var _home_less__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_home_less__WEBPACK_IMPORTED_MODULE_4__);\n/** Import modules*/\n\n/** Import files*/\n\n\n\n\n\n\nclass Home extends react__WEBPACK_IMPORTED_MODULE_0__[\"Component\"] {\n  //  state = {  }\n  render() {\n    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n      className: \"home-wrapper page-wrapper\"\n    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_header__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Banner__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Carousel__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null));\n  }\n\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Home);\n\n//# sourceURL=webpack:///./app/home/index.js?");
 
 /***/ }),
 
@@ -187,7 +211,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("// removed by extract-text-webpack-plugin\nmodule.exports = {\"page-wrapper\":\"page-wrapper\",\"page-header\":\"page-header\",\"logo\":\"logo\",\"hamburger\":\"hamburger\",\"bar\":\"bar\"};\n\n//# sourceURL=webpack:///./app/styles/global.less?");
+eval("// removed by extract-text-webpack-plugin\nmodule.exports = {\"page-wrapper\":\"page-wrapper\",\"page-header\":\"page-header\",\"logo\":\"logo\",\"hamburger\":\"hamburger\",\"bar\":\"bar\",\"page-footer\":\"page-footer\"};\n\n//# sourceURL=webpack:///./app/styles/global.less?");
 
 /***/ }),
 
