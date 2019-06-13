@@ -6,7 +6,11 @@ class Header extends Component {
             <div className='page-header'>
                 <header>
                     <div className='logo'></div>
-                    <div className='hamburger'></div>
+                    <div className='hamburger'>
+                        <span className='bar'></span>
+                        <span className='bar'></span>
+                        <span className='bar'></span>
+                    </div>
                 </header>
             </div>
          );

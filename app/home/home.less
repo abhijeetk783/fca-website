@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden;
+}
+
 .banner {
     text-align: center;
     padding: 200px 0;
@@ -15,5 +19,97 @@
         font-weight: 300;
         line-height: 1.2;
         color: #000000;
+    }
+}
+.slide-wrapper{
+    height: 100vh;
+    position: relative;
+    margin: 0 auto 5em;
+
+    .slide {
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translate3d(0,-50%,0);
+        transform: translate3d(0,-50%,0);
+        left: 0;
+        width: 100%;
+        visibility: hidden;
+        opacity: 0;
+        padding: 0 8.33333333vw 0 12.666667vw;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        z-index: 2;
+        height: 100%;
+        &._is-active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .slide-link {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            text-decoration: none;
+        }
+        .image-container {
+            height: 100%;
+            &._green {
+                background-color: green;
+            }
+            &._yellow {
+                background-color: yellow;
+            }
+            &._blue {
+                background-color: blue;
+            }
+            &._brown {
+                background-color: brown;
+            }
+            &._red {
+                background-color: red;
+            }
+            &._black {
+                background-color: black;
+            }
+            &._pink {
+                background-color: pink;
+            }
+        }
+        .__left {
+            width: calc(25vw + 33px);
+            z-index: 1;
+            position: relative;
+            overflow: hidden;
+        }
+    
+        .__right {
+            width: calc(33.33333333vw + 33px);
+            color: #000;
+            position: relative;
+            margin-left: 4.8em;
+        }
+    
+        .content {
+            .title {
+                font-size: 4em;
+                font-weight: bold;
+                color: #000000;
+            }
+            .subtitle {
+                font-size: 1em;
+                position: relative;
+                padding-left: 40px;
+                &:before {
+                    content: '';
+                    width: 28px;
+                    height: 1px;
+                    background: #000;
+                    position: absolute;
+                    left: 0;
+                    bottom: 10px;
+                }
+            }
+        }
     }
 }
