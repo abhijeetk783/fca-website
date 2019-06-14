@@ -21,6 +21,9 @@ button {
 body {
   overflow-x: hidden;
 }
+body .page-wrapper {
+  max-width: unset;
+}
 .banner {
   text-align: center;
   padding: 200px 0;
