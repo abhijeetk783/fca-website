@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import TodoApp from './Components/index'
-import Home from './home'
+import Home from './Home'
 
 import style from './styles/global.less'
 

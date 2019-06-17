@@ -3,6 +3,67 @@ Footer styles define here
 */
 
 .page-footer {
-    background: #000;
+    position: relative;
     height: 100vh;
+    &.black{
+        background: #000;
+        color: #fff;
+    }
+    .common-footer {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        padding: 0 3.5em;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        address {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            width: 300px;
+            span {
+                font-weight: 500;
+            }   
+        }
+
+        .copy-writes {
+            font-size: 14px;
+            font-weight: 300;
+            width: 300px;
+            text-align: center;
+        }
+        .footer-social-icons {
+            border: 1px solid red;
+            height: 10px;
+            width: 300px;
+            text-align: center;
+        }
+    }
+    footer {
+        height: 100%;
+    }
+    .page-footer-wrapper {
+        display: table;
+        height: inherit;
+        width: 100%;
+        .page-footer-content {
+            display: table-cell;
+            width: 100%;
+            text-align: center;
+            vertical-align: middle;
+            .title {
+                font-size: 3.2em;
+                color: #e53d5f;
+                text-transform: uppercase;
+                font-weight: 800;
+            }
+            .subtitle {
+                font-size: 14px;
+                font-weight: 300;
+            }
+        }
+    }
+   
 }

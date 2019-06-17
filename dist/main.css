@@ -266,6 +266,9 @@ a img {
 :focus {
   outline: 0;
 }
+* {
+  box-sizing: border-box;
+}
 /*Template*/
 .page-wrapper {
   max-width: 1280px;
@@ -286,6 +289,7 @@ body {
   align-items: center;
   width: 100%;
   justify-content: space-between;
+  padding: 0 2em;
 }
 .page-header .logo {
   height: 60px;
@@ -295,12 +299,12 @@ body {
 }
 .page-header .hamburger {
   height: 30px;
-  width: 24px;
+  width: 18px;
 }
 .page-header .hamburger .bar {
   height: 2px;
   background: #000;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
   width: 100%;
   display: block;
   border-radius: 3px;
@@ -312,8 +316,67 @@ body {
 Footer styles define here
 */
 .page-footer {
-  background: #000;
+  position: relative;
   height: 100vh;
+}
+.page-footer.black {
+  background: #000;
+  color: #fff;
+}
+.page-footer .common-footer {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  padding: 0 3.5em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.page-footer .common-footer address {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  width: 300px;
+}
+.page-footer .common-footer address span {
+  font-weight: 500;
+}
+.page-footer .common-footer .copy-writes {
+  font-size: 14px;
+  font-weight: 300;
+  width: 300px;
+  text-align: center;
+}
+.page-footer .common-footer .footer-social-icons {
+  border: 1px solid red;
+  height: 10px;
+  width: 300px;
+  text-align: center;
+}
+.page-footer footer {
+  height: 100%;
+}
+.page-footer .page-footer-wrapper {
+  display: table;
+  height: inherit;
+  width: 100%;
+}
+.page-footer .page-footer-wrapper .page-footer-content {
+  display: table-cell;
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+}
+.page-footer .page-footer-wrapper .page-footer-content .title {
+  font-size: 3.2em;
+  color: #e53d5f;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.page-footer .page-footer-wrapper .page-footer-content .subtitle {
+  font-size: 14px;
+  font-weight: 300;
 }
 /**
 Form styles define here
