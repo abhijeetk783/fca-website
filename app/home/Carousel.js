@@ -54,8 +54,8 @@ class Carousel extends Component {
          return (
              this.state.data.map((item,i)=> {
                 return (
-                    <div className='slide-wrapper'>
-                        <div className='slide _is-active' key={i}>
+                    <div className='slide-wrapper' key={i}>
+                        <div className='slide _is-active'>
                             <a className='slide-link' href="">
                                 <div className={`image-container __left _${item.color}`}></div>
                                 <div className='content __right'>
