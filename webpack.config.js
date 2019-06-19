@@ -71,6 +71,7 @@ module.exports = {
     contentBase: path.join(__dirname, 'dist'),
     writeToDisk: true,
     inline: true,
+    historyApiFallback: true,
     port: 9000 // port to run dev-server
   }
 };
