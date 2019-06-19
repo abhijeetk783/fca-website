@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-class Header extends Component {
+class PageHeader extends Component {
     render(){
         return(
             <section className='header'>
@@ -17,4 +17,4 @@ class Header extends Component {
     }
 }
 
-export default Header;
+export default PageHeader;
