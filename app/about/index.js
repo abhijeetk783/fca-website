@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
 
-import Header from './Header'
+import PageHeader from './Header'
 import SectionOne from './SectionOne'
 import WhatWeDo from './WhatWeDo'
 import OurPartners from './OurPartners'
+import Header from '../Header'
+import Footer from '../Footer'
 import style from './about.less' 
 
 class About extends Component {
     //state = {  }
     render() { 
         return (
+            <React.Fragment>
+                <Header/>
             <div className='about-wrapper page-wrapper'>
                 <div className='about-header'>
-                    <Header />
+                    <PageHeader />
                 </div>
                 <div className='about-section_one'>
                     <SectionOne />
@@ -24,6 +28,8 @@ class About extends Component {
                     <OurPartners />
                 </div>
             </div>
+            <Footer bgColor='black'/>
+            </React.Fragment>
           );
     }
 }
