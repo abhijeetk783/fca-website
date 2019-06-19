@@ -8,9 +8,7 @@ class Header extends Component {
         }
     }
 
-    handleMenuClick() {
-
-    }
+    
 
     render() { 
         return ( 
