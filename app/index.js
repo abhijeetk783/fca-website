@@ -7,13 +7,13 @@ import style from './styles/global.less'
 // import { basePath as basename } from './static.json'
 class App extends Component {
     render() {
-        console.log("This is the process.env", process.env.PUBLIC_URL)
         return(
             <div>
-                 <Router>
+                 {/* <Router>
                 <Route path="/" exact component={Home} />
                 <Route path="/about/" component={About} />
-                </Router>
+                </Router> */}
+                <Home />
             </div>
         )
     }
