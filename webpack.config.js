@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const path = require("path")
@@ -56,13 +57,16 @@ module.exports = {
      
     ]
   },
+
   plugins: [
     new HtmlWebpackPlugin({
       template: "./app/index.html",
       hash: true,
       filename: "index.html"
     }),
-    new ExtractTextPlugin("main.css")
+    new ExtractTextPlugin("main.css"),
+    new webpack.DefinePlugin( {'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+    'process.env.DEBUG': JSON.stringify(process.env.DEBUG) } )
   ],
 
   devServer: {
@@ -71,6 +75,7 @@ module.exports = {
     contentBase: path.join(__dirname, 'dist'),
     writeToDisk: true,
     inline: true,
+    historyApiFallback: true,
     port: 9000 // port to run dev-server
   }
 };
