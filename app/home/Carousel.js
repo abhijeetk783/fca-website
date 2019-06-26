@@ -1,11 +1,9 @@
 import React, {Component} from 'react';
 import { Controller, Scene } from 'react-scrollmagic';
 import { Tween, Timeline } from 'react-gsap';
-
 class Carousel extends Component {
     constructor(props) {
         super(props)
-        this.renderData = this.renderData.bind(this)
         this.state = {
             data : [
                     {
@@ -54,37 +52,48 @@ class Carousel extends Component {
         }
     }
 
-    componentDidMount() {
-      
-    }
-
     renderData() {
          return (
              this.state.data.map((item,i)=> {
-              const active = i === 0 ? '_is-active' : '';
+               const active = i === 0 ? '_is-active' : ''
                 return (
                     <div className={`slide-wrapper ${active}`} key={i}>
-                        <div className='slide'>
-                            
+                        <div className='slide '>
                             <a className='slide-link' href="">
-                            <Controller> <Scene
-        triggerElement="#scrollStarts"
-        duration={300}
-      >{(progress) => (
-          <Tween            
-            to={{
-              left: '0px',
-              rotation: -360,
-              width: '200px',
-              height: '200px',
-            }}       
-            ease="Strong.easeOut"
-            totalProgress={progress}
-            paused
-          >
-            <div className="tween">Pin Test</div>
-          </Tween>    
-        )}</Scene></Controller>
+                                <Controller>
+                                  <Scene
+                                      triggerElement="#scrollStarts"
+                                      duration={300}
+                                    >
+                                    {(progress) => (
+                                      <Tween 
+                                       staggerFrom={{
+                                          opacity: 0,
+                                          scaleY: 0,
+                                          height: '0',
+                                        }}
+                                        staggerTo={{
+                                          opacity: 1,
+                                          scaleY: 1,
+                                          height: '100vh',
+                                          ease:'Circ.easeOut',
+                                        }}
+                                        stagger={0.15}           
+                                        // to={{
+                                        //   opacity: 1,
+                                        //   scaleY: 1,
+                                        //   height: '100vh'
+                                        // }}       
+                                       
+
+                                       totalProgress={progress}
+                                        
+                                      >
+                                    <div className={`image-container __left _${item.color}`}></div>
+                                    </Tween>    
+                                    )}
+                                   </Scene>
+                                </Controller>
                                 <div className='content __right'>
                                     <h5 className='title'>{item.title}</h5>
                                     <div className='subtitle'>{item.subtitle}</div>
@@ -102,91 +111,8 @@ class Carousel extends Component {
     render() { 
         const renderData = this.renderData()
         return ( 
-            <section id="scrollStarts" className='portfolio carousel-wrapper'>
-                {this.renderData}
-
-                <Controller>
-      <Scene
-        triggerElement="#scrollStarts"
-        duration={300}
-      >
-        {(progress) => (
-          <Tween            
-            to={{
-              left: '0px',
-              rotation: -360,
-              width: '200px',
-              height: '200px',
-            }}       
-            ease="Strong.easeOut"
-            totalProgress={progress}
-            paused
-          >
-            <div className="tween">Pin Test</div>
-          </Tween>    
-        )}
-      </Scene>
-      <Scene
-        triggerElement="#trigger"
-        duration={600}
-        pin={false}
-      >
-      {(progress) => (
-        <Tween
-          from={{
-            css: {
-              left: '0px',
-              rotation: -360,
-              width: '200px',
-              height: '200px',
-            },
-            ease: 'Strong.easeInOut',
-          }}
-          to={{
-            css: {
-              left: '100px',
-              rotation: -180,
-              width: '50px',
-              height: '50px',
-            },
-            ease: 'Strong.easeInOut',
-          }}
-          totalProgress={progress}
-          paused
-        >
-          <div className="tween">Pin Test</div>
-        </Tween>
-      )}        
-      </Scene>
-      <Scene
-        duration={500}
-      >
-        {(progress) => (
-          <div>
-            <Tween        
-              staggerFrom={{
-                left: 700,
-              }}
-              staggerTo={{
-                left: 0,
-                ease: 'Back.easeOut',
-              }}
-              stagger={0.15}
-              totalProgress={progress}
-              paused
-            >
-              <div className="stagger" />
-              <div className="stagger" />
-              <div className="stagger" />
-              <div className="stagger" />
-              <div className="stagger" />
-            </Tween>
-          </div>
-        )}
-      </Scene>
-    </Controller>
-
-                
+            <section id="scrollStarts"  className='portfolio carousel-wrapper'>
+                {renderData}
             </section>
          );
     }

@@ -90,6 +90,8 @@ body .page-wrapper {
   position: relative;
   overflow: hidden;
   height: 100%;
+  transform: scaleY(0);
+  transform-origin: bottom;
 }
 .slide-wrapper .slide .__right {
   width: calc(33.33333333vw + 33px);
