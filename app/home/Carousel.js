@@ -4,7 +4,10 @@ import { Tween, Timeline } from 'react-gsap';
 class Carousel extends Component {
     constructor(props) {
         super(props)
+
+        this.handleScroll = this.handleScroll.bind(this)
         this.state = {
+          transform: '',
             data : [
                     {
                       "_id": "5d028e26e2818d216e74f5c0",
@@ -50,6 +53,26 @@ class Carousel extends Component {
                     }
               ]
         }
+    }
+
+    componentDidMount() {
+      console.log('hhh');
+      window.addEventListener('scroll', this.handleScroll);
+    }
+
+    componentWillUnmount() {
+        console.log('xxx');
+        window.removeEventListener('scroll', this.handleScroll);
+    }
+
+    handleScroll(event) {
+      console.log('fdfds')
+        let scrollTop = event.srcElement.body.scrollTop,
+            itemTranslate = Math.min(0, scrollTop/3 - 60);
+
+        this.setState({
+          transform: itemTranslate
+        });
     }
 
     renderData() {
