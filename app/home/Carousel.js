@@ -56,17 +56,17 @@ class Carousel extends Component {
     }
 
     componentDidMount() {
-      console.log('hhh');
+      //console.log('hhh');
       window.addEventListener('scroll', this.handleScroll);
     }
 
     componentWillUnmount() {
-        console.log('xxx');
+       // console.log('xxx');
         window.removeEventListener('scroll', this.handleScroll);
     }
 
     handleScroll(event) {
-      console.log('fdfds')
+      //console.log('fdfds')
         let scrollTop = event.srcElement.body.scrollTop,
             itemTranslate = Math.min(0, scrollTop/3 - 60);
 
@@ -81,42 +81,11 @@ class Carousel extends Component {
                const active = i === 0 ? '_is-active' : ''
                 return (
                     <div className={`slide-wrapper ${active}`} key={i}>
-                        <div className='slide '>
+                        <div className='slide'>
                             <a className='slide-link' href="">
-                                <Controller>
-                                  <Scene
-                                      triggerElement="#scrollStarts"
-                                      duration={300}
-                                    >
-                                    {(progress) => (
-                                      <Tween 
-                                       staggerFrom={{
-                                          opacity: 0,
-                                          scaleY: 0,
-                                          height: '0',
-                                        }}
-                                        staggerTo={{
-                                          opacity: 1,
-                                          scaleY: 1,
-                                          height: '100vh',
-                                          ease:'Circ.easeOut',
-                                        }}
-                                        stagger={0.15}           
-                                        // to={{
-                                        //   opacity: 1,
-                                        //   scaleY: 1,
-                                        //   height: '100vh'
-                                        // }}       
-                                       
-
-                                       totalProgress={progress}
-                                        
-                                      >
-                                    <div className={`image-container __left _${item.color}`}></div>
-                                    </Tween>    
-                                    )}
-                                   </Scene>
-                                </Controller>
+                                <div className={`image-container __left`}>
+                                  <div className={`home-slide__bg _${item.color}`}></div>
+                                </div>
                                 <div className='content __right'>
                                     <h5 className='title'>{item.title}</h5>
                                     <div className='subtitle'>{item.subtitle}</div>
@@ -134,7 +103,7 @@ class Carousel extends Component {
     render() { 
         const renderData = this.renderData()
         return ( 
-            <section id="scrollStarts"  className='portfolio carousel-wrapper'>
+            <section id="scrollStarts" onScroll={this.handleScroll}  className='portfolio carousel-wrapper'>
                 {renderData}
             </section>
          );

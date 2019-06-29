@@ -8,6 +8,8 @@ import ReactDOM from 'react-dom';
 import Home from './Home'
 import style from './styles/global.less'
 
+
+
 class App extends Component { 
 
 	render() {

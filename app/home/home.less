@@ -67,25 +67,25 @@ body .page-wrapper { //Hot fix
         }
         .image-container {
             height: 100%;
-            &._green {
+            ._green {
                 background-color: green;
             }
-            &._yellow {
+            ._yellow {
                 background-color: yellow;
             }
-            &._blue {
+            ._blue {
                 background-color: blue;
             }
-            &._brown {
+            ._brown {
                 background-color: brown;
             }
-            &._red {
+            ._red {
                 background-color: red;
             }
-            &._black {
+            ._black {
                 background-color: black;
             }
-            &._pink {
+            ._pink {
                 background-color: pink;
             }
         }
@@ -95,10 +95,26 @@ body .page-wrapper { //Hot fix
             position: relative;
             overflow: hidden;
             height: 100%;
-            transform: scaleY(0);
-            transform-origin: bottom;
+            
         }
-    
+        .home-slide__bg {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                overflow: hidden;
+                background-repeat: no-repeat;
+                background-position: 50%;
+                background-size: cover;
+            }
         .__right {
             width: calc(33.33333333vw + 33px);
             color: #000;
