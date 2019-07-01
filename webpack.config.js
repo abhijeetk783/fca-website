@@ -47,7 +47,7 @@ module.exports = {
         test: /\.(jpe?g|png|gif|svg|ico)$/i,
         use: [
           {
-            loader: "file-loader",
+            loader: "url-loader",
             options: {
               outputPath: "assets/"
             }
@@ -71,7 +71,7 @@ module.exports = {
 
   devServer: {
     // configuration for webpack-dev-server
-    contentBase: './app/public',  //source of static assets
+    contentBase: './app/Public',  //source of static assets
     contentBase: path.join(__dirname, 'dist'),
     writeToDisk: true,
     inline: true,

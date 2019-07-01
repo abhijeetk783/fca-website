@@ -1,3 +1,90 @@
+.menu-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: white;
+}
+.menu-list-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background: black;
+  opacity: 1;
+  color: #fafafa;
+  transition: height 0.8s ease;
+  z-index: 2;
+}
+.menu-list-container ul {
+  padding: 14.333333vw 12.666667vw;
+  list-style: none;
+}
+.menu-list-container .list-item-wrapper {
+  font-size: 2.8em;
+  font-weight: bold;
+  line-height: 1.23;
+  text-align: left;
+  color: #ffffff;
+  position: relative;
+  opacity: 0;
+}
+.menu-list-container .list-item-wrapper a {
+  text-decoration: none;
+}
+.menu-list-container .list-item-wrapper a:hover .pos {
+  color: #fff;
+}
+.menu-list-container .list-item-wrapper .pos {
+  font-size: 0.3em;
+  font-weight: bold;
+  position: absolute;
+  left: 50px;
+}
+.menu-list-container .list-item-wrapper .list-item {
+  padding: 1rem 0;
+  margin: 0 5%;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.menu-list-container .list-item-wrapper .line {
+  width: 90%;
+  height: 1px;
+  background: gray;
+  margin: 0 auto;
+  display: none;
+}
+.hamburger {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 50px;
+  right: 20px;
+}
+.hamburger .line {
+  height: 2px;
+  background: #000;
+  margin-bottom: 3px;
+  width: 100%;
+  display: block;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+}
+.hamburger .line:nth-child(3s) {
+  margin-bottom: 0;
+}
+.hamburger .line:nth-child(2) {
+  transform-origin: top left;
+}
+.hamburger .line:nth-child(1) {
+  transform-origin: top left;
+}
 body {
   overflow-x: hidden;
 }
@@ -259,87 +346,6 @@ body .page-wrapper {
   margin: auto;
   border: 1px solid;
 }
-.menu-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 99;
-  opacity: 0.9;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  color: white;
-}
-.menu-list-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  background: black;
-  opacity: 1;
-  color: #fafafa;
-  transition: height 0.8s ease;
-  z-index: 2;
-}
-.menu-list-container ul {
-  padding: 14.333333vw 12.666667vw;
-  list-style: none;
-}
-.menu-list-container .list-item-wrapper {
-  font-size: 2.8em;
-  font-weight: bold;
-  line-height: 1.23;
-  text-align: left;
-  color: #ffffff;
-  position: relative;
-  opacity: 0;
-}
-.menu-list-container .list-item-wrapper .pos {
-  font-size: 0.3em;
-  font-weight: bold;
-  position: absolute;
-  left: 50px;
-}
-.menu-list-container .list-item-wrapper .list-item {
-  padding: 1rem 0;
-  margin: 0 5%;
-  cursor: pointer;
-  margin-bottom: 20px;
-}
-.menu-list-container .list-item-wrapper .line {
-  width: 90%;
-  height: 1px;
-  background: gray;
-  margin: 0 auto;
-  display: none;
-}
-.hamburger {
-  height: 30px;
-  width: 30px;
-  position: absolute;
-  top: 50px;
-  right: 20px;
-}
-.hamburger .line {
-  height: 2px;
-  background: #000;
-  margin-bottom: 3px;
-  width: 100%;
-  display: block;
-  border-radius: 3px;
-  transition: all 0.2s ease;
-}
-.hamburger .line:nth-child(3s) {
-  margin-bottom: 0;
-}
-.hamburger .line:nth-child(2) {
-  transform-origin: top left;
-}
-.hamburger .line:nth-child(1) {
-  transform-origin: top left;
-}
 /**
 1. button
 2. animation
@@ -555,9 +561,10 @@ body {
 .page-header .logo {
   height: 60px;
   width: 60px;
-  background: #e3001b;
-  border-radius: 50%;
   z-index: 5;
+}
+.page-header .logo img {
+  max-width: 100%;
 }
 /**
 Footer styles define here
@@ -569,6 +576,9 @@ Footer styles define here
 .page-footer.black {
   background: #000;
   color: #fff;
+}
+.page-footer.black .title {
+  color: #e53d5f;
 }
 .page-footer .common-footer {
   position: absolute;
@@ -617,7 +627,6 @@ Footer styles define here
 }
 .page-footer .page-footer-wrapper .page-footer-content .title {
   font-size: 3.2em;
-  color: #e53d5f;
   text-transform: uppercase;
   font-weight: 800;
 }

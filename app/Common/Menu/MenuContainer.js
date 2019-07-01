@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Menu from './Menu'
 import MenuItem from './MenuItem'
 import MenuButton from './MenuButton'
@@ -27,16 +28,15 @@ class MenuContainer extends Component {
 	    this.setState({menuOpen: false});
 	  }
 
-    //state = {  }
-
 
     render() { 
 
      const menu = ['Difference','Work','Connect']
      const menuItems = menu.map((val,index)=>{
       const delayValue = index
+      const links = val.toLowerCase()
        return (
-       <MenuItem key={index} number={`0${index+1}.`} delay={`${index * 0.1}s`} onClick={()=>{this.handleLinkClick()}}>{val}
+       <MenuItem key={index} route={links} number={`0${index+1}.`} delay={`${index * 0.1}s`} onClick={()=>{this.handleLinkClick()}}>{val}
     	</MenuItem>
     	)
      });
@@ -48,7 +48,7 @@ class MenuContainer extends Component {
 		         
 		        </div>
 		        <Menu open={this.state.menuOpen}>
-		          {menuItems}
+		          	{menuItems}
 		        </Menu>
 		        
 		    </React.Fragment>

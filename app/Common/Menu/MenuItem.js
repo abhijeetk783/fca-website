@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class MenuItem extends Component{
   constructor(props){
@@ -36,17 +37,20 @@ class MenuItem extends Component{
     }
     return(
       <li className='list-item-wrapper' style={styles.container}>
-        <span className='pos'  style={styles.pos}>{this.props.number}</span>
-        <div className='list-item'
-          style={styles.menuItem} 
-          onMouseEnter={()=>{this.handleHover();}} 
-          onMouseLeave={()=>{this.handleHover();}}
-          onClick={this.props.onClick}
-        >
-          {this.props.children}  
+        <Link to={this.props.route}>
+          <span className='pos'  style={styles.pos}>{this.props.number}</span>
+          <div className='list-item'
+            style={styles.menuItem} 
+            onMouseEnter={()=>{this.handleHover();}} 
+            onMouseLeave={()=>{this.handleHover();}}
+            onClick={this.props.onClick}
+          >
+            {this.props.children}  
 
-        </div>
+          </div>
+        </Link>
       <div className='line' style={styles.line}/>
+
     </li>  
     )
   }

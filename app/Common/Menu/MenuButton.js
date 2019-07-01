@@ -23,7 +23,7 @@ class MenuButton extends Component {
   }
   
   render(){
-    console.log(this.state.color, this.state.open)
+   // console.log(this.state.color, this.state.open)
     const styles = {
       
       line: {
