@@ -18,31 +18,16 @@ class Menu extends Component {
   render(){
     const styles={
       container: {
-        position: 'absolute',
-        top: 0,
-        left: 0,
         height: this.state.open? '100vh': 0,
-        width: '100vw',
-        display: 'flex',
-        flexDirection: 'column',
-        background: 'black',
-        opacity: 0.95,
-        color: '#fafafa',
-        transition: 'height 0.8s ease',
-        zIndex: 2,
-
-      },
-      menuList: {
-        paddingTop: '3rem',
       }
     }
     return(
-      <div className="menu-list-container" style={styles.container}>
+      <div className='menu-list-container' style={styles.container}>
         {
           this.state.open?
-            <div style={styles.menuList}>
+            <ul style={styles.menuList}>
               {this.props.children}
-            </div>:null
+            </ul>:null
         }
       </div>
     )

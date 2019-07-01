@@ -9,7 +9,53 @@
   width: 100%;
   color: white;
 }
+.menu-list-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background: black;
+    opacity: 1;
+    color: #fafafa;
+    transition: height 0.8s ease;
+    z-index: 2;
+    ul {
+        padding: 14.333333vw 12.666667vw;
+        list-style: none;
+    }
+    .list-item-wrapper {
+      font-size: 2.8em;
+      font-weight: bold;
+      line-height: 1.23;
+      text-align: left;
+      color: #ffffff;
+      position: relative;
+      opacity: 0;
+        .pos {
+          font-size: 0.3em;
+          font-weight: bold;
+          position: absolute;
+          left: 50px;
+        }
+      .list-item {
+        padding: 1rem 0;
+        margin: 0 5%;
+        cursor: pointer;
+        margin-bottom: 20px;
 
+      }
+      .line {
+        width: 90%;
+        height: 1px;
+        background: gray;
+        margin: 0 auto;
+        display: none;
+        
+      }
+    }
+}
 .hamburger {
     height: 30px;
     width: 30px;

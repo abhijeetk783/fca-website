@@ -32,11 +32,11 @@ class MenuContainer extends Component {
 
     render() { 
 
-     const menu = ['About Us','Our Products','Services','FAQ','Contact Us']
+     const menu = ['Difference','Work','Connect']
      const menuItems = menu.map((val,index)=>{
       const delayValue = index
        return (
-       <MenuItem key={index} delay={`${index * 0.1}s`} onClick={()=>{this.handleLinkClick()}}>{val}
+       <MenuItem key={index} number={`0${index+1}.`} delay={`${index * 0.1}s`} onClick={()=>{this.handleLinkClick()}}>{val}
     	</MenuItem>
     	)
      });
@@ -55,7 +55,7 @@ class MenuContainer extends Component {
          );
     }
 }
- 
+
 export default MenuContainer;
 
 
