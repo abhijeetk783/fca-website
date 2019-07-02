@@ -16,7 +16,7 @@ class Header extends Component {
             <React.Fragment>
             <div className='page-header' >
                 <header>
-                 <Link to='/'><div className='logo'><img src={logo}/></div></Link>
+                 <Link to='/' className='logo-wrapper'><div className='logo'><img src={logo}/></div></Link>
                  <MenuContainer />
                 </header>
             </div>

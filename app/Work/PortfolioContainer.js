@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import style from './work.less'
 class PortfolioContainer extends Component { 
 	constructor(props) {
 		super(props)
@@ -53,12 +53,30 @@ class PortfolioContainer extends Component {
 
 	render() {
 		return(
+        <div className='portfolio-wrapper'>
+          <div className='container'>
+            <div className='row'>
+				    { 
+              this.state.data.map((item,i)=> {
+                 const oddEvenClass = i % 2 ? 'odd' : 'even'
+    					 return (
 
-				this.state.data.map((item,i)=> {
-					return (
-						<div key={i}>work {item.title}</div>
-						)
-				})
+                  <div className='col-6 col-l-4 col-m-5 col-s-12' key={i}>
+
+                    <div className={`work-wrapper ${oddEvenClass}`}>
+                      <div className='work-image' style={{background: item.color }}></div>
+                      <div className='work-details'>
+                        <h5 className='sub-title'>{item.subtitle}</h5>
+                        <h4 className='title'>{item.title}</h4>
+                      </div>
+                    </div>
+                  </div>
+    						)
+    				  })
+            }
+            </div>
+          </div>
+        </div>
 
 			)
 	}
