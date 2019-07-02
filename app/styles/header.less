@@ -1,5 +1,9 @@
 .page-header {
-    margin: 2em 0;
+    padding: 2em 0;
+    position: fixed;
+    width: 100%;
+    z-index: 110;
+
     header {
         display: flex;
         align-items: center;
@@ -10,22 +14,10 @@
     .logo {
         height: 60px;
         width: 60px;
-        background: #e3001b;
-        border-radius: 50%;
-    }
-    .hamburger {
-        height: 30px;
-        width: 18px;
-        .bar {
-            height: 2px;
-            background: #000;
-            margin-bottom: 3px;
-            width: 100%;
-            display: block;
-            border-radius: 3px;
-            &:last-child {
-                margin-bottom: 0;
-            }
+        z-index: 5;
+        img {
+            max-width: 100%;
         }
     }
+    
 }

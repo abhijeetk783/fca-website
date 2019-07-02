@@ -1,8 +1,13 @@
 import React, {Component} from 'react';
+import { Controller, Scene } from 'react-scrollmagic';
+import { Tween, Timeline } from 'react-gsap';
 class Carousel extends Component {
     constructor(props) {
         super(props)
+
+        this.handleScroll = this.handleScroll.bind(this)
         this.state = {
+          transform: '',
             data : [
                     {
                       "_id": "5d028e26e2818d216e74f5c0",
@@ -50,14 +55,37 @@ class Carousel extends Component {
         }
     }
 
+    componentDidMount() {
+      //console.log('hhh');
+      window.addEventListener('scroll', this.handleScroll);
+    }
+
+    componentWillUnmount() {
+       // console.log('xxx');
+        window.removeEventListener('scroll', this.handleScroll);
+    }
+
+    handleScroll(event) {
+      //console.log('fdfds')
+        let scrollTop = event.srcElement.body.scrollTop,
+            itemTranslate = Math.min(0, scrollTop/3 - 60);
+
+        this.setState({
+          transform: itemTranslate
+        });
+    }
+
     renderData() {
          return (
              this.state.data.map((item,i)=> {
+               const active = i === 0 ? '_is-active' : ''
                 return (
-                    <div className='slide-wrapper' key={i}>
-                        <div className='slide _is-active'>
+                    <div className={`slide-wrapper ${active}`} key={i}>
+                        <div className='slide'>
                             <a className='slide-link' href="">
-                                <div className={`image-container __left _${item.color}`}></div>
+                                <div className={`image-container __left`}>
+                                  <div className={`home-slide__bg _${item.color}`}></div>
+                                </div>
                                 <div className='content __right'>
                                     <h5 className='title'>{item.title}</h5>
                                     <div className='subtitle'>{item.subtitle}</div>
@@ -75,7 +103,7 @@ class Carousel extends Component {
     render() { 
         const renderData = this.renderData()
         return ( 
-            <section className='portfolio carousel-wrapper'>
+            <section id="scrollStarts" onScroll={this.handleScroll}  className='portfolio carousel-wrapper'>
                 {renderData}
             </section>
          );

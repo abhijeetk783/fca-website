@@ -8,7 +8,7 @@ import Header from '../Header'
 import Footer from '../Footer'
 import style from './about.less' 
 
-class About extends Component {
+class Difference extends Component {
     //state = {  }
     render() { 
         return (
@@ -28,10 +28,13 @@ class About extends Component {
                     <OurPartners />
                 </div>
             </div>
-            <Footer bgColor='black'/>
+            <Footer>
+                <small className='subtitle'>Interested in more?</small>
+                <div className='title'>View Work</div>
+            </Footer>
             </React.Fragment>
           );
     }
 }
  
-export default About;
+export default Difference;
