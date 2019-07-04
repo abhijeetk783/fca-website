@@ -14,7 +14,7 @@ class Difference extends Component {
         return (
             <React.Fragment>
                 <Header/>
-            <div className='about-wrapper page-wrapper'>
+                <div className='about-wrapper page-wrapper'>
                 <div className='about-header'>
                     <PageHeader />
                 </div>

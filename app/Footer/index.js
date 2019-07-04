@@ -14,7 +14,7 @@ class Footer extends Component {
                     </div> 
 
                     <div className='common-footer'>
-                        <address>
+                        <address style={{'visibility': 'hidden'}}>
                             <span>FINDCreative Avenues LLP.</span> <br />
                             A 904/905, Kanakia Wall Street, <br />
                             Chakala, Andheri (E), Mumbai 400093.
