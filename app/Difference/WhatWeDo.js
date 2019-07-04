@@ -3,7 +3,20 @@ class WhatWeDo extends Component{
     render(){
         return(
             <section className='whatWeDoSec'>
-             <div className='whatWeDoTitle'>What we do</div>
+
+                <div className='container'>
+                    <div className='row'>
+                        <div className='whatWeDoTitle'>What we do</div>
+                        <div className='col-md-4'>
+                            <div className='box-wrapper'>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>      
+
+
+            
 
             <div className='whatWeDoDesc'>
             <div className="flex-container">
