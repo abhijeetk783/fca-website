@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const path = require("path")
-
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 module.exports = {
   entry: "./app/index.js",
   output: {
@@ -17,6 +17,32 @@ module.exports = {
         use: {
           loader: "babel-loader"
         }
+      },
+
+
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'svg-sprite-loader',
+            options: {
+              extract: true,
+              publicPath: './app/Public/',
+              spriteFilename: svgPath => `sprite${svgPath.substr(-4)}`
+            }
+          },
+          {
+            loader: 'svgo-loader',
+            options: {
+              plugins: [
+                {removeTitle: true},
+                {convertColors: {shorthex: false}},
+                {convertPathData: false}
+              ]
+            }
+          }
+          
+        ]
       },
 
       {
@@ -66,7 +92,8 @@ module.exports = {
     }),
     new ExtractTextPlugin("main.css"),
     new webpack.DefinePlugin( {'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-    'process.env.DEBUG': JSON.stringify(process.env.DEBUG) } )
+    'process.env.DEBUG': JSON.stringify(process.env.DEBUG) } ),
+    new SpriteLoaderPlugin({ plainSprite: true })
   ],
 
   devServer: {
