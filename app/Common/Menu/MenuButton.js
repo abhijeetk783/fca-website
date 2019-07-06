@@ -31,7 +31,7 @@ class MenuButton extends Component {
       },
       lineTop: {
         transform: this.state.open ? 'rotate(45deg)':'none',
-        marginBottom: this.state.open ? '4px' : '3px'
+        marginBottom: this.state.open ? '4px' : '4px'
         
       },
       lineMiddle: {
@@ -39,7 +39,7 @@ class MenuButton extends Component {
         transform: this.state.open ? 'translateX(-16px)':'none',
       },
       lineBottom: {
-        transform: this.state.open ? 'translateX(-5px) rotate(-45deg)':'none',
+        transform: this.state.open ? 'translateX(-4px) translateY(-8px) rotate(-45deg)':'none',
       },       
     }
     return(

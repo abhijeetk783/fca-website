@@ -36,3 +36,14 @@
 
   .generateCols((@counter - 1));
 }
+
+
+.font-face(@font-family, @filepath, @font-weight, @font-style){
+    @font-face {
+        font-family: @font-family;
+        src: url('@{filepath}.woff2')format('woff2');
+        src:url('@{filepath}.woff')format('woff');
+        font-weight:@font-weight;
+        font-style:@font-style;
+    }
+}

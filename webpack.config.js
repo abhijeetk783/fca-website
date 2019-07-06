@@ -1,4 +1,4 @@
-const webpack = require('webpack');
+  const webpack = require('webpack');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const path = require("path")
@@ -70,7 +70,7 @@ module.exports = {
         })
       },
       {
-        test: /\.(jpe?g|png|gif|svg|ico)$/i,
+        test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf|svg|ico)$/i,
         use: [
           {
             loader: "url-loader",

@@ -27,7 +27,8 @@ Used bem method for css stucture for more information visit :- http://getbem.com
 	font-family: "Helvetica-Neue", "Helvetica", Arial, sans-serif;
 	line-height: 1.5;
 	margin: 0;
-    padding: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
     
 }
 
@@ -75,11 +76,6 @@ a img {
 }
 
 /*Template*/
-.page-wrapper {
-    max-width: 1280px;
-    margin: 0 auto;
-}
-
 .cta-wrapper {
   &._fixed {
       width: 100px;
@@ -102,12 +98,19 @@ a img {
     transform: rotate(-90deg);
     display: block;
     text-decoration: none;
+    font-size: 11px;
+    word-spacing: 0.3em;
+     font-family: @font-nexa-ltrg;
   }
 
   .scroll-down {
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
     display: block;
     text-decoration: none;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    font-family: @font-nexa-bdrg;
   }
 }
 
