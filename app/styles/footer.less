@@ -1,6 +1,8 @@
 /**
 Footer styles define here
 */
+@import '../styles/mixins';
+@import '../styles/typography';
 
 .page-footer {
     position: relative;
@@ -38,10 +40,10 @@ Footer styles define here
             text-align: center;
         }
         .footer-social-icons {
-            border: 1px solid red;
             height: 10px;
             width: 300px;
             text-align: center;
+            
         }
     }
     footer {
@@ -57,13 +59,13 @@ Footer styles define here
             text-align: center;
             vertical-align: middle;
             .title {
-                font-size: 3.2em;
+                font-size: 4.2em;
                 text-transform: uppercase;
-                font-weight: 800;
+                font-family: @font-nexa-bdrg;
+                line-height: 1.8;
             }
             .subtitle {
-                font-size: 14px;
-                font-weight: 300;
+                font-size: 15px;
             }
         }
     }

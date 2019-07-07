@@ -8,10 +8,11 @@ import Banner from './Banner'
 import Carousel from './Carousel'
 import Header from '../Header'
 import Footer from '../Footer'
-
+//import Icon from '../Common/Utill/Icon'
+//import twitterLogo from '../Public/svg/arrow-down.svg';
 import style from './home.less'
 
-
+//const rendered = '<svg viewBox="${twitterLogo.viewBox}"><use xlink:href="#${twitterLogo.id}" /></svg>';
 class Home extends Component {
     constructor(props) {
         super(props)
@@ -34,6 +35,8 @@ class Home extends Component {
     render() { 
         return ( 
             <div className='home-wrapper page-wrapper'>
+              {/* <Icon type="arrow-down" className="f4 blue" /> */}
+                
                   <Header />
                   <Banner />
                   <Carousel />

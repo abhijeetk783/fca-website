@@ -1,10 +1,19 @@
 /*Typography 
  variables
-
+	
 */
-@basefont : 'Poppins', sans-serif;
 
+@import (css) url('https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700&display=swap');
 
 body {
-    font-family: @basefont;
+    font-family: 'nexa_lightregular';
 }
+
+//Fonts
+.font-face('nexa_boldregular', '../Public/fonts/nexa_bold-webfont', normal, normal);
+.font-face('nexa_lightregular', '../Public/fonts/nexa_light-webfont',  normal, normal);
+
+
+@font-nexa-ltrg : 'nexa_lightregular';
+@font-nexa-bdrg : 'nexa_boldregular';
+@font-work-sans: 'Work Sans', sans-serif;

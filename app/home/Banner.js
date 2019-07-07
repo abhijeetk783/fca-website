@@ -26,13 +26,20 @@ class Banner extends Component {
     render() { 
         return ( 
             <section className='banner'>
-                <div className='sub-title'>We are FINDCreative Ave.</div>
-                <div className='title'>
-                    <ReactSplitText
-                        text="to create is to unite"
-                        getTextChars={this.getTextChars}
-                    />
+              <div className='container'>
+                <div className='row'>
+                  <div className='col-md-12'>
+                  <div className='sub-title'>We are FINDCreative Ave.</div>
+                    <div className='title'>
+                        <ReactSplitText
+                            text="to create is to unite"
+                            getTextChars={this.getTextChars}
+                        />
+                    </div>
+                    </div>
                 </div>
+              </div>
+                
             </section>
          );
     }

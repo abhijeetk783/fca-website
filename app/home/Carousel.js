@@ -11,27 +11,27 @@ class Carousel extends Component {
             data : [
                     {
                       "_id": "5d028e26e2818d216e74f5c0",
-                      "color": "green",
-                      "title": "Kramer Dixon",
-                      "subtitle": "male"
+                      "color": "blue",
+                      "title": "Nihar Gold",
+                      "subtitle": "Package Design"
                     },
                     {
                       "_id": "5d028e26122cf11b4a5d3394",
-                      "color": "yellow",
-                      "title": "Gould Heath",
-                      "subtitle": "male"
+                      "color": "green",
+                      "title": "Rapid Rupee",
+                      "subtitle": "Brand & Communication design"
                     },
                     {
                       "_id": "5d028e2634c9c788e3c65b1f",
-                      "color": "blue",
-                      "title": "Galloway Gilliam",
-                      "subtitle": "male"
+                      "color": "yellow",
+                      "title": "TLC India",
+                      "subtitle": "Package Design"
                     },
                     {
                       "_id": "5d028e26ac8e0a463a9b43ee",
-                      "color": "brown",
-                      "title": "Elizabeth Giles",
-                      "subtitle": "female"
+                      "color": "pink",
+                      "title": "Coco Soul",
+                      "subtitle": "Branded Content"
                     },
                     {
                       "_id": "5d028e2617383507ab3dc123",
@@ -104,7 +104,7 @@ class Carousel extends Component {
         const renderData = this.renderData()
         return ( 
             <section id="scrollStarts" onScroll={this.handleScroll}  className='portfolio carousel-wrapper'>
-                {renderData}
+               <div className='container'><div className='row'><div className='col-md-12'> {renderData} </div></div></div>
             </section>
          );
     }

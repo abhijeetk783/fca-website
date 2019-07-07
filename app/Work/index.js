@@ -8,12 +8,12 @@ class Work extends Component {
 	render() {
 		return(
 			<React.Fragment>
-			<Header/>
-			<PortfolioContainer/>
-			<Footer bgColor='black'>
-				<small className='subtitle'>Got a project?</small>
-                <div className='title'>let's talk</div>
-			</Footer>
+				<Header/>
+				<PortfolioContainer/>
+				<Footer bgColor='black'>
+					<small className='subtitle'>Got a project?</small>
+                	<div className='title' style={{color: '#ffe357'}}>let's talk</div>
+				</Footer>
 			</React.Fragment>
 			)
 	}
