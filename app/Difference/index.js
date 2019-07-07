@@ -6,6 +6,7 @@ import WhatWeDo from './WhatWeDo'
 import OurPartners from './OurPartners'
 import Header from '../Header'
 import Footer from '../Footer'
+import Partners from './Partners'
 import style from './about.less' 
 
 class Difference extends Component {
@@ -133,6 +134,10 @@ our minds race to find the best design-led solutions.</p>
                         </div>
                     </section>
                </div>
+
+                {/* <div>
+                    <Partners/>
+                </div> */}
 
             </React.Fragment>
           );
